@@ -1,0 +1,16 @@
+<form [formGroup]="scheduleTaskForm" (ngSubmit)="editTask(scheduleTaskForm.value)">
+    <div class="form-group">
+        <label>ID: </label>
+        <input type="number" class="form-control" id="id" formControlName="id">
+        <label>Name: </label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <label>Recurrency: </label>
+        <input type="text" class="form-control" id="recurrency" formControlName="recurrency">
+        <label>Code: </label>
+        <textarea type="text" class="form-control" id="code" formControlName="code">Enter groovy script code here</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submitt" class="btn btn primary" [disabled]="!scheduleTaskForm.dirty">Save</button>
+        <a [routerLink]="['/tasks']"><button type="submit" class="btn btn primary">Back</button></a>
+    </div>
+</form>

@@ -1,0 +1,6 @@
+<form [formGroup]="scheduleTaskForm" (ngSubmit)="addTask(scheduleTaskForm.value)">
+  <label>Name:</label><input type="text" class="form-control" id="name" formControlName="name">
+  <label>Recurrence:</label><input type="text" class="form-control" id="recurrence" formControlName="recurrence">
+  <label>Code:</label><textarea type="text" class="form-control" id="code" formControlName="code">Enter groovy script code here</textarea>
+  <button type="submit">Add</button>
+</form>
